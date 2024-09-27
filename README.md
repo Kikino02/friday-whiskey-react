@@ -1,8 +1,17 @@
-# React + Vite
+# Friday Whiskey Band Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the official website for the band **Friday Whiskey**, built using **React**. The website features information about the band, upcoming concerts, media galleries, and contact details. It provides fans with an immersive experience, allowing them to explore the band's latest news, music, and events.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design:** The website is fully responsive, ensuring a seamless experience across all devices.
+- **Media Gallery:** A dynamic photo gallery showcasing the band’s performances and media.
+- **Event Management:** A section dedicated to listing upcoming concerts and events.
+- **Interactive Navigation:** Intuitive and stylish navigation with active link highlighting.
+- **Social Media Integration:** Direct links to the band's social media platforms including Instagram, YouTube, Facebook, and Spotify.
+
+## Technologies Used
+
+- **React:** The core framework used to build the website.
+- **Tailwind CSS:** For styling and responsive design.
+- **React Router:** For smooth and intuitive navigation between pages.
