@@ -79,7 +79,7 @@ export default function Table() {
           </tbody>
         </table>
       </div>
-      <div className="w-full lg:w-[50%] 2xl:w-[40%] flex flex-col items-center lg:self-end">
+      <div className="w-full lg:w-[50%] 2xl:w-[40%] flex flex-col items-center self-end">
         <h2 className="mb-4 text-3xl sm:text-4xl font-bold text-white">
           OLD CONCERTS
         </h2>
