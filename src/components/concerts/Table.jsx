@@ -35,7 +35,6 @@ export default function Table() {
     return `${day}.${month}.${year}`;
   };
 
-  // State to manage how many old concerts are displayed
   const [visibleOldConcerts, setVisibleOldConcerts] = useState(5);
 
   const loadMoreConcerts = () => {
