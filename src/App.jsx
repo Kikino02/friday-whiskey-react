@@ -1,11 +1,14 @@
-import Photos from "./components/photos/Photos";
+import Footer from "./components/common/Footer";
+import Section from "./components/common/Section";
+import Navbar from "./components/navbar/Navbar";
+import { Outlet } from "react-router-dom";
 
-function App() {
+export default function RootLayout() {
   return (
-    <>
-      <Photos />
-    </>
+    <Section>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </Section>
   );
 }
-
-export default App;

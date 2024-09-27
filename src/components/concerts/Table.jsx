@@ -42,11 +42,12 @@ export default function Table() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between md:justify-center gap-10">
+    <div className="flex flex-col lg:flex-row items-center lg:items-start md:justify-center gap-10">
       <div className="w-full lg:w-[50%] 2xl:w-[40%] flex flex-col items-center text-white">
         <h2 className="mb-4 text-3xl sm:text-4xl font-bold">
           UPCOMING CONCERTS
         </h2>
+        {upcomingConcerts.length === 0 && <p>No upcoming concerts</p>}
         <table className="w-[90%] table-fixed text-sm md:text-base lg:text-lg">
           <tbody>
             {upcomingConcerts.map((concert, index) => {

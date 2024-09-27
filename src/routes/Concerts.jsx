@@ -1,4 +1,4 @@
-import Table from "./Table";
+import Table from "../components/concerts/Table";
 
 export default function Concerts() {
   return (

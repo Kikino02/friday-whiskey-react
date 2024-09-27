@@ -1,5 +1,4 @@
-import Section from "../common/Section";
-import Card from "./Card";
+import Card from "../components/about/Card.jsx";
 
 export default function About() {
   return (

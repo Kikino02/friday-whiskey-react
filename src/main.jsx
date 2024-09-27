@@ -4,17 +4,17 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import "./fontAwesome.js";
-import RootLayout from "./routes/RootLayout.jsx";
+import App from "./App.jsx";
 
-import Home from "./components/home/Home.jsx";
-import About from "./components/about/About.jsx";
-import Concerts from "./components/concerts/Concerts.jsx";
-import Photos from "./components/photos/Photos.jsx";
+import Home from "./routes/Home.jsx";
+import About from "./routes/About.jsx";
+import Concerts from "./routes/Concerts.jsx";
+import Photos from "./routes/Photos.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
+    element: <App />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },

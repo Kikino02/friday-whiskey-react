@@ -2,7 +2,7 @@ export default function AllPhotos({ visibleCount, images }) {
   const visibleImages = images.slice(0, visibleCount);
   return (
     <>
-      <h2 className="mb-4 text-3xl sm:text-4xl font-bold text-white">
+      <h2 className="my-8 text-3xl sm:text-4xl font-bold text-white">
         All photos
       </h2>
       <div className="w-full 2xl:w-3/4 flex flex-wrap justify-center mb-10">
