@@ -1,24 +1,45 @@
+import { useState } from "react";
 import { concerts } from "../../assets/concerts.js";
+import Button from "../common/Button.jsx";
 
 export default function Table() {
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  const upcomingConcerts = concerts.filter((concert) => {
-    const concertDate = new Date(concert.date);
-    return concertDate >= today;
-  });
+  const sortConcertsByDate = (concerts) => {
+    return concerts.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA;
+    });
+  };
 
-  const pastConcerts = concerts.filter((concert) => {
-    const concertDate = new Date(concert.date);
-    return concertDate < today;
-  });
+  const upcomingConcerts = sortConcertsByDate(
+    concerts.filter((concert) => {
+      const concertDate = new Date(concert.date);
+      return concertDate >= today;
+    })
+  );
+
+  const pastConcerts = sortConcertsByDate(
+    concerts.filter((concert) => {
+      const concertDate = new Date(concert.date);
+      return concertDate < today;
+    })
+  );
 
   const formatDate = (date) => {
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-indexed
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
     return `${day}.${month}.${year}`;
+  };
+
+  // State to manage how many old concerts are displayed
+  const [visibleOldConcerts, setVisibleOldConcerts] = useState(5);
+
+  const loadMoreConcerts = () => {
+    setVisibleOldConcerts((prevCount) => prevCount + 5);
   };
 
   return (
@@ -62,9 +83,9 @@ export default function Table() {
         <h2 className="mb-4 text-3xl sm:text-4xl font-bold text-white">
           OLD CONCERTS
         </h2>
-        <table className="w-[90%] table-fixed text-darkGrey text-sm md:text-base lg:text-lg">
+        <table className="w-[90%] table-fixed text-darkGrey text-sm md:text-base lg:text-lg mb-4">
           <tbody>
-            {pastConcerts.map((concert, index) => {
+            {pastConcerts.slice(0, visibleOldConcerts).map((concert, index) => {
               const date = new Date(concert.date);
               const formattedDate = formatDate(date);
 
@@ -92,6 +113,9 @@ export default function Table() {
             })}
           </tbody>
         </table>
+        {visibleOldConcerts < pastConcerts.length && (
+          <Button buttonName="Load more" onClick={loadMoreConcerts} />
+        )}
       </div>
     </div>
   );
