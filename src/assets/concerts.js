@@ -119,4 +119,16 @@ export const concerts = [
     name: "PINK WHALE",
     link: "https://www.facebook.com/events/3760622957554524/",
   },
+  {
+    date: "08/09/2025",
+    city: "TEST",
+    name: "TEST",
+    link: "https://www.facebook.com/events/3760622957554524/",
+  },
+  {
+    date: "08/12/2025",
+    city: "TEST",
+    name: "TEST",
+    link: "https://www.facebook.com/events/3760622957554524/",
+  },
 ];
