@@ -21,7 +21,10 @@ export default function Home() {
             <Button className="w-36 text-xs" buttonName="New Event" />
           </a>
           <a href="https://fridaywhiskey.sk/links" target="_blank">
-            <Button className="w-36 text-xs" buttonName="Listen now" />
+            <Button
+              className="w-36 text-xs sm:text-sm"
+              buttonName="Listen now"
+            />
           </a>
         </div>
       </div>
