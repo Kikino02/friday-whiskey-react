@@ -23,6 +23,7 @@ export default {
         lightGrey: "#D8D8D8",
         grey: "#B9B9B9",
         form: "#222427",
+        hover: "#1d1f21",
       },
     },
   },
