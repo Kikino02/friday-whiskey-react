@@ -5,16 +5,16 @@ import {
   faFacebook,
   faSpotify,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons"; // Import from the free-brands-svg-icons package
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowDown,
-  faEnvelope,
   faCopyright,
   faBars,
   faX,
   faChevronLeft,
   faChevronRight,
-} from "@fortawesome/free-solid-svg-icons"; // Import from the free-solid-svg-icons package
+} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
   faInstagram,

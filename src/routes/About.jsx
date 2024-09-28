@@ -2,7 +2,7 @@ import Card from "../components/about/Card.jsx";
 
 export default function About() {
   return (
-    <main className="text-white flex flex-col flex-grow gap-10 mt-8">
+    <main className="text-white flex flex-col flex-grow gap-10 mt-8 mx-4">
       <h1 className="text-center text-7xl md:text-8xl xl:text-9xl font-right bg-gradient-to-t from-gray-500 to-gray-100 bg-clip-text text-transparent mb-12">
         <span className="block">About</span>
         <span>Friday Whiskey</span>

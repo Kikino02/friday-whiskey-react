@@ -22,6 +22,7 @@ export default {
         darkGreyButton: "#121417",
         lightGrey: "#D8D8D8",
         grey: "#B9B9B9",
+        form: "#222427",
       },
     },
   },

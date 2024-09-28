@@ -121,13 +121,13 @@ export const concerts = [
   },
   {
     date: "08/09/2025",
-    city: "TEST",
+    city: "Bratislava",
     name: "TEST",
     link: "https://www.facebook.com/events/3760622957554524/",
   },
   {
     date: "08/12/2025",
-    city: "TEST",
+    city: "Bratislava",
     name: "TEST",
     link: "https://www.facebook.com/events/3760622957554524/",
   },

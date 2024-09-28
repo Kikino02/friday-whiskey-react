@@ -5,9 +5,9 @@ import logo2 from "../assets/logos/logo_art_white2.png";
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row flex-grow md:justify-around items-center 2xl:px-28 md:gap-10 mt-8 2xl:mt-16 responsive-layout">
-      <div className="text-darkGrey flex flex-col justify-between mt-10 md:mt-8 p-8 gap-10 items-center md:items-start">
-        <div className="font-julee text-xs sm:text-base md:text-xs lg:text-base xl:text-lg 2xl:text-xl md:text-start md:inline-block flex flex-col items-center text-center">
+    <main className="flex flex-col lg:flex-row flex-grow md:justify-around items-center 2xl:px-28 md:gap-10 mt-8 2xl:mt-16 mx-4">
+      <div className="text-darkGrey flex flex-col justify-between mt-10 md:mt-8 p-8 gap-10 items-center lg:items-start">
+        <div className="font-julee text-xs sm:text-base lg:text-base xl:text-lg 2xl:text-xl lg:text-start lg:inline-block flex flex-col items-center text-center">
           <img className="max-w-4xl w-full" src={logo1} alt="FW logo text" />
           <p className="max-w-[60ch] md:max-w-[75ch] block mb-4">
             “Ready to unleash your inner rock star? Let Friday Whiskey take you
