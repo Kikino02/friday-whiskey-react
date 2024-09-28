@@ -98,7 +98,6 @@ export default function Navbar() {
         {isOpen ? <Icon iconName="x" /> : <Icon iconName="bars" />}
       </div>
 
-      {/* Mobile Links */}
       {isOpen && <MobileNav handleLinkClick={handleToggler} />}
     </nav>
   );
