@@ -7,7 +7,7 @@ export default function Contact() {
       <h1 className="text-center text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-right bg-gradient-to-t from-gray-500 to-gray-100 bg-clip-text text-transparent">
         Contact Us
       </h1>
-      <div className="flex-grow flex items-center justify-center w-full">
+      <div className="flex-grow flex items-center justify-center w-full my-10">
         <article className="flex flex-col md:flex-row w-full max-w-4xl">
           <div className="flex flex-col gap-6 items-center md:items-start md:justify-between w-full md:w-1/2 bg-darkGreyButton p-12 rounded-t-xl md:rounded-tr-none md:rounded-l-xl font-julee border ">
             <div className="text-center md:text-start">
