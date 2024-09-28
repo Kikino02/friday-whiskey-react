@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import MobileNav from "./MobileNav";
 import Icon from "../common/Icon";
 
-import logoNav from "../../../public/photos/logo/logo_mix.png";
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +12,11 @@ export default function Navbar() {
 
   return (
     <nav className="relative mt-8 text-white flex items-center justify-around px-8 py-5 max-w-[1750px] w-[90%] bg-darkGreyButton rounded-3xl border border-white/40 mx-auto">
-      <img src={logoNav} alt="FW logo" className="w-[43px] h-[42px]" />
+      <img
+        src="/photos/logo/logo_mix.png"
+        alt="FW logo"
+        className="w-[43px] h-[42px]"
+      />
 
       <div className="hidden md:flex gap-5 lg:gap-10 lg:text-lg font-julee">
         <NavLink
