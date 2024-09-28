@@ -4,12 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        oswald: ['"Oswald"', "sans-serif"],
-        bebas: ['"Bebas Neue"', "sans-serif"],
-        anton: ['"Anton"', "sans-serif"],
         right: ['"Righteous"', "sans-serif"],
         julee: ['"Julee"', "sans-serif"],
-        sigmar: ['"Sigmar One"', "sans-serif"],
       },
       colors: {
         white: "#fff",

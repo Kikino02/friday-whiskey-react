@@ -30,7 +30,7 @@ export default function About() {
           imageSrc="/photos/band/Villy.jpg"
         />
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-10 sm:justify-around text-center mb-10 text-sm lg:text-base relative">
+      <div className="flex flex-col sm:flex-row items-center gap-10 sm:justify-around text-center mb-10 text-sm lg:text-base relative font-julee">
         <div className="filter blur-3xl absolute w-full sm:w-[80%] h-full sm:h-[80%] -z-50 bg-gradient-to-r from-red-500 to-blue-500 opacity-20"></div>
         <div className="w-[90%] sm:w-[40%]">
           <p className="mb-10">
