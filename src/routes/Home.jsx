@@ -1,7 +1,7 @@
 import Button from "../components/common/Button";
 
-import logo1 from "../assets/logos/logo_font_white2.png";
-import logo2 from "../assets/logos/logo_art_white2.png";
+import logo1 from "../../public/photos/logo/logo_font_white2.png";
+import logo2 from "../../public/photos/logo/logo_art_white2.png";
 
 export default function Home() {
   return (

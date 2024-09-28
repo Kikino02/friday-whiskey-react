@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import MobileNav from "./MobileNav";
 import Icon from "../common/Icon";
 
-import logoNav from "../../assets/logos/logo_mix.png";
+import logoNav from "../../../public/photos/logo/logo_mix.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
