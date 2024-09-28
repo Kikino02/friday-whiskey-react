@@ -18,10 +18,10 @@ export default function Home() {
         </div>
         <div className="flex gap-5">
           <a href="https://www.youtube.com">
-            <Button className="w-36 text-sm" buttonName="New Event" />
+            <Button className="w-36 text-xs" buttonName="New Event" />
           </a>
           <a href="https://fridaywhiskey.sk/links" target="_blank">
-            <Button className="w-36 text-sm" buttonName="Listen now" />
+            <Button className="w-36 text-xs" buttonName="Listen now" />
           </a>
         </div>
       </div>
