@@ -19,7 +19,7 @@ export default function Home() {
           <a href="https://www.youtube.com">
             <Button className="w-36 text-sm" buttonName="New Event" />
           </a>
-          <a href="https://www.youtube.com">
+          <a href="https://fridaywhiskey.sk/links">
             <Button className="w-36 text-sm" buttonName="Listen now" />
           </a>
         </div>
