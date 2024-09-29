@@ -1,9 +1,9 @@
+// pages/Photos.js
+import { useState } from "react";
 import Button from "../components/common/Button";
 import Carousel from "../components/photos/Carousel";
 import AllPhotos from "../components/photos/AllPhotos";
 import Modal from "../components/common/Modal";
-
-import { useState } from "react";
 
 import image1 from "../assets/images/image1.jpg";
 import image2 from "../assets/images/image2.jpg";
@@ -35,16 +35,15 @@ export default function Photos() {
 
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImgSrc, setModalImgSrc] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (imgSrc) => {
-    setModalImgSrc(imgSrc);
+  const openModal = (imgSrc, index) => {
+    setCurrentIndex(index);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalImgSrc(null);
   };
 
   const loadMore = () => {
@@ -67,7 +66,13 @@ export default function Photos() {
           <Button buttonName="Load more" onClick={loadMore} />
         )}
       </main>
-      <Modal isOpen={isModalOpen} onClose={closeModal} imgSrc={modalImgSrc} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        images={images}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
     </>
   );
 }

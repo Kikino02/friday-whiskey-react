@@ -28,22 +28,25 @@ export default function Carousel({ images, openModal }) {
         onClick={handlePrevClick}
       />
       <div className="flex w-[75%] justify-center gap-10 lg:gap-20 xl:gap-0 xl:justify-between 2xl:justify-around">
-        {displayedImages.map((img, index) => (
-          <div
-            key={index}
-            className={`${index === 2 ? "hidden xl:block" : ""} ${
-              index === 1 ? "hidden md:block" : ""
-            } w-full md:w-[50%] xl:w-[30%] 2xl:w-[25%] h-80 overflow-hidden flex items-center justify-center bg-gray-200 select-none`}
-            onClick={() => openModal(img)}
-          >
-            <img
-              src={img}
-              alt={`Slide ${index}`}
-              className="w-full h-full object-cover cursor-pointer"
-              draggable="false"
-            />
-          </div>
-        ))}
+        {displayedImages.map((img, index) => {
+          const imgIndex = (currentIndex + index) % totalImages; // Calculate correct index
+          return (
+            <div
+              key={imgIndex}
+              className={`${index === 2 ? "hidden xl:block" : ""} ${
+                index === 1 ? "hidden md:block" : ""
+              } w-full md:w-[50%] xl:w-[30%] 2xl:w-[25%] h-80 overflow-hidden flex items-center justify-center bg-gray-200 select-none`}
+              onClick={() => openModal(img, imgIndex)}
+            >
+              <img
+                src={img}
+                alt={`Slide ${imgIndex}`}
+                className="w-full h-full object-cover cursor-pointer"
+                draggable="false"
+              />
+            </div>
+          );
+        })}
       </div>
       <FontAwesomeIcon
         icon="chevron-right"
