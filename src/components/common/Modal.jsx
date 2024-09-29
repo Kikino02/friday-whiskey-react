@@ -48,7 +48,7 @@ export default function Modal({
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="w-full h-auto max-w-[320px] sm:max-w-[640px] md:max-w-[800px] lg:max-w-[1024px] xl:max-w-[1280px] object-contain"
+          className="w-full h-auto max-h-[960px] max-w-[320px] sm:max-w-[640px] md:max-w-[800px] lg:max-w-[1024px] xl:max-w-[1280px] object-contain"
         />
 
         <button
