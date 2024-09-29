@@ -1,10 +1,5 @@
-// components/common/Modal.js
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 export default function Modal({
   isOpen,
@@ -51,7 +46,7 @@ export default function Modal({
         </button>
 
         <img
-          src={images[currentIndex]} // Use currentIndex to get the current image
+          src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
           className="w-full h-auto max-w-[320px] sm:max-w-[640px] md:max-w-[800px] lg:max-w-[1024px] xl:max-w-[1280px] object-contain"
         />

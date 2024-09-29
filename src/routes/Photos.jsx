@@ -1,4 +1,3 @@
-// pages/Photos.js
 import { useState } from "react";
 import Button from "../components/common/Button";
 import Carousel from "../components/photos/Carousel";
@@ -33,11 +32,10 @@ export default function Photos() {
   const [visibleCount, setVisibleCount] = useState(4);
   const totalImages = images.length;
 
-  // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (imgSrc, index) => {
+  const openModal = (index) => {
     setCurrentIndex(index);
     setIsModalOpen(true);
   };
