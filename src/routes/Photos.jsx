@@ -1,6 +1,7 @@
 import Button from "../components/common/Button";
 import Carousel from "../components/photos/Carousel";
 import AllPhotos from "../components/photos/AllPhotos";
+import Modal from "../components/common/Modal";
 
 import { useState } from "react";
 
@@ -32,19 +33,41 @@ export default function Photos() {
   const [visibleCount, setVisibleCount] = useState(4);
   const totalImages = images.length;
 
+  // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImgSrc, setModalImgSrc] = useState(null);
+
+  const openModal = (imgSrc) => {
+    setModalImgSrc(imgSrc);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImgSrc(null);
+  };
+
   const loadMore = () => {
     setVisibleCount((prevCount) => prevCount + 4);
   };
+
   return (
-    <main className="flex flex-col flex-grow items-center mt-8 mb-12 font-julee relative mx-4">
-      <h1 className="text-center text-7xl md:text-8xl xl:text-9xl font-right bg-gradient-to-t from-gray-500 to-gray-100 bg-clip-text text-transparent mt-8 mb-12">
-        Photos
-      </h1>
-      <Carousel images={images} />
-      <AllPhotos images={images} visibleCount={visibleCount} />
-      {visibleCount < totalImages && (
-        <Button buttonName="Load more" onClick={loadMore} />
-      )}
-    </main>
+    <>
+      <main className="flex flex-col flex-grow items-center mt-8 mb-12 font-julee relative mx-4">
+        <h1 className="text-center text-7xl md:text-8xl xl:text-9xl font-right bg-gradient-to-t from-gray-500 to-gray-100 bg-clip-text text-transparent mt-8 mb-12">
+          Photos
+        </h1>
+        <Carousel images={images} openModal={openModal} />
+        <AllPhotos
+          images={images}
+          visibleCount={visibleCount}
+          openModal={openModal}
+        />
+        {visibleCount < totalImages && (
+          <Button buttonName="Load more" onClick={loadMore} />
+        )}
+      </main>
+      <Modal isOpen={isModalOpen} onClose={closeModal} imgSrc={modalImgSrc} />
+    </>
   );
 }

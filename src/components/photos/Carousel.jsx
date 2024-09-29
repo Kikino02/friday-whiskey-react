@@ -1,7 +1,8 @@
+// components/photos/Carousel.js
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Carousel({ images }) {
+export default function Carousel({ images, openModal }) {
   const totalImages = images.length;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,11 +34,12 @@ export default function Carousel({ images }) {
             className={`${index === 2 ? "hidden xl:block" : ""} ${
               index === 1 ? "hidden md:block" : ""
             } w-full md:w-[50%] xl:w-[30%] 2xl:w-[25%] h-80 overflow-hidden flex items-center justify-center bg-gray-200 select-none`}
+            onClick={() => openModal(img)}
           >
             <img
               src={img}
               alt={`Slide ${index}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover cursor-pointer"
               draggable="false"
             />
           </div>
